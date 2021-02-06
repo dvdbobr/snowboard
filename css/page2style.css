@@ -1,0 +1,53 @@
+#page2 {
+    height: 100vh;
+    max-width: 100%;
+    width: 100vw;
+    
+    
+}
+.history{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.history-content{
+    height: 80vh;
+    width: 100%;
+    background-color: #8fc1e3;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.history-content>img{
+    padding: 2rem;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.history-content h1{
+    text-align: center;
+    font-family: "Snowtop";
+    font-size: 3rem;
+}
+.history-content h1>span{
+    color:  #f79e02;
+}
+.history-content p{
+    font-size: 2.5rem;
+    padding: 20px;
+    text-align: center;
+    font-family: "Snowdrift";
+}
+.text-box{
+    text-align: center;
+    font-size: 2rem;
+    margin:40px 0;
+    background-color: #687864;
+    margin: auto;
+    height: 80%;
+    width: 80%;
+    opacity: 0.8;
+    
+}

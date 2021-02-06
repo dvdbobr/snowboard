@@ -1,0 +1,63 @@
+#snowboard-types {
+    height: 100vh;
+    width: 100vw;
+    background-color: #FFFFFF;
+    opacity: 0.8;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#snowboard-types>h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Snowtop";
+}
+
+.snowboard-types-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.type-container {
+    width: 50%;
+    height: 33%;
+    padding: 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.snowboard-types-container>p {
+    width: 50%;
+    font-size: 2rem;
+}
+
+.type-left {
+    float: left;
+    width: 55%;
+}
+
+.type-right {
+    float: right;
+    width: 45%;
+}
+.type-right>img {
+    float: right;
+    width: 260px;
+    height: 200px;
+}
+
+.type-left>p {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    font-family: "Snowdrift";
+}
+
+.type-left>h3{
+    font-family: "Snowtop";
+    font-size: 1.6rem;
+    color:  #f79e02;
+}

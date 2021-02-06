@@ -1,0 +1,187 @@
+/* navbar */
+
+.navbar-wrap {
+    position: fixed;/*used fixed position so it would stick to the top left of the site*/
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar-wrap .toggler {
+    position: absolute;/*used absolute because i want this to be hidden behind my hamburger menu in the top left corner*/
+    top: 0;
+    left: 0;
+    z-index: 20;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.navbar-wrap .hamburger {
+    position: absolute;/*used absolute because i wanted the hamburger to be at the top left corner above my toggler*/
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 65px;
+    height: 65px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hamburger Line */
+
+.navbar-wrap .hamburger>div {
+    position: relative;/*used relative because i wanted to place the lines for the hamburger relative to the top left position of the father element*/
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+
+.navbar-wrap .hamburger>div::before, 
+.navbar-wrap .hamburger>div::after {
+    content: '';
+    position: absolute;/*because this is psuedo code i have to use positon absolute, with this i placed the top and bottom lines of the hamburger*/
+    z-index: 10;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: black;
+}
+
+/* Moves Line Down */
+
+.navbar-wrap .hamburger>div::after {
+    top: 10px;
+}
+
+/* Toggler Animation */
+
+.navbar-wrap .toggler:checked+.hamburger>div {
+    transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+
+.navbar-wrap .toggler:checked+.hamburger>div:before, 
+.navbar-wrap .toggler:checked+.hamburger>div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+
+.navbar-wrap .toggler:checked:hover+.hamburger>div {
+    transform: rotate(225deg);
+}
+
+/* Show Menu */
+.navbar-wrap .toggler:checked ~ .hamburger{
+    background-color: #f7f9fb;
+    opacity: 0.5;
+}
+ .navbar-wrap .toggler:checked~.navbar {
+    visibility: visible;
+}
+
+.navbar-wrap .toggler:checked~.navbar>div {
+    transform: scale(1);
+    transition-duration: 0.75;
+}
+
+.navbar-wrap .toggler:checked~.navbar>div>div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+} 
+
+ .navbar-wrap .navbar {
+    position: fixed;/*used fixed positon because i wanted to make it stick to the top left of the page*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  .navbar-wrap .navbar>div {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.navbar-wrap .navbar>div>div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.navbar-wrap .navbar>div>div>ul>li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.navbar-wrap .navbar>div>div>ul>li>a {
+    font-family: "Snowtop";
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.navbar-wrap .navbar>div>div>ul>li>a:hover {
+    color:  #f79e02; 
+} 
+ul>li>a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #f7f9fb;
+    cursor: pointer;
+}
+/* Big Navbar */
+.bg-navbar{
+    position: fixed;/*this is the main navbar i used fixed because i wanted it to stick to the top of the page even when i scroll down*/
+    top:0;
+    height: 80px;
+    width: 100vw;
+    z-index: 5;
+    transition: top 0.3s;
+}
+.navbar2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar2 > ul >li{
+    float: left;
+    list-style: none;
+    padding: 20px;
+    font-family: "Snowtop";
+}
+.navbar2 > ul > li > a:hover{
+    transition: color 0.4s ease;
+    cursor: pointer;
+    color:  #f79e02; 
+}
